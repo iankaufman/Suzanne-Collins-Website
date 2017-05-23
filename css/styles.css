@@ -1,55 +1,63 @@
 /* CSS Menu From Foundation */
+
 .menu-hover-lines {
-	text-align: center;
-	text-transform: uppercase;
-	font-weight: 500;
-	letter-spacing: 1px;
-	transition: all 0.35s ease;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: all 0.35s ease;
+  font-family: "sommet",sans-serif;
+    font-size: 1.5em;
+    display: -webkit-flex;
+   
+width: 50%;
+    float: left;
+    
 }
 
 .menu-hover-lines li a {
-	padding: 0.75rem 0;
-	position: relative;
-	margin-left: 1rem;
-    color: blue;
+  padding: 0.75rem 0;
+  color: rgba(44, 44, 44, 0.5);
+  position: relative;
+  margin-left: .5em;
 }
 
 .menu-hover-lines li:first-child a {
-	margin-left: 0;
+  margin-left: 0;
 }
 
 .menu-hover-lines li.active > a {
-	background-color: transparent;
+  background-color: transparent;
 }
 
 .menu-hover-lines a:before,
-  .menu-hover-lines a::after {
-	height: 3px;
-	position: absolute;
-	content: '';
-	transition: all 0.35s ease;
-	width: 0;
+.menu-hover-lines a::after {
+  height: 3px;
+  position: absolute;
+  content: '';
+  transition: all 0.35s ease;
+  background-color: #9f1938;
+  width: 0;
 }
 
 .menu-hover-lines a::before {
-	top: 0;
-	left: 0;
+  top: 0;
+  left: 0;
 }
 
 .menu-hover-lines a::after {
-	bottom: 0;
-	right: 0;
+  bottom: 0;
+  right: 0;
 }
 
 .menu-hover-lines a:hover,
-  .menu-hover-lines li.active > a {
-	transition: all 0.35s ease;
+.menu-hover-lines li.active > a {
+  color: #403e3e;
+  transition: all 0.35s ease;
 }
 
 .menu-hover-lines a:hover::before,
-  .menu-hover-lines .active a::before,
-  .menu-hover-lines a:hover::after,
-  .menu-hover-lines .active a::after {
-	width: 100%;
-background-color: blue;
+.menu-hover-lines .active a::before,
+.menu-hover-lines a:hover::after,
+.menu-hover-lines .active a::after {
+  width: 100%;
 }
