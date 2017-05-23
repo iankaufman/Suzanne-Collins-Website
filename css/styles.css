@@ -7,10 +7,6 @@
   transition: all 0.35s ease;
   font-family: "sommet",sans-serif;
     font-size: 1.5em;
-    display: -webkit-flex;
-   
-width: 50%;
-    float: left;
     
 }
 
@@ -61,3 +57,13 @@ width: 50%;
 .menu-hover-lines .active a::after {
   width: 100%;
 }
+@media only screen and (max-width: 40em){
+    .menu-hover-lines {
+        -ms-flex-pack: center;
+      justify-content: center;
+    }}
+@media only screen and (min-width: 40.063em) {.linkleft {
+         -ms-flex-pack: end;
+      justify-content: flex-end; 
+    } } /* min-width 641px, medium screens */{
+    
