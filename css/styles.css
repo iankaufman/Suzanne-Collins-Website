@@ -84,15 +84,24 @@
 
 .welcome{
     padding: 1em 8em 0em 8em;
-    background-image: #67787F url("../images/index/welcomebgg.jpg");
+    background: black url("../images/index/welcomebgg.jpg");
     color: white;
-    height: 100rem;
+    height:  31em;
     background-repeat: no-repeat;
-    background-position: 
+    background-size: contain;
+    
+    background-position: right;
+   
     
 }
 
 .welcome p{
     font-size: 1.2em;
     line-height: 1.2;
+    font-family: "mr-eaves-sans", sans-serif;
+}
+.welcome h1{
+    font-size: 5em;
+    line-height: 1.2;
+    font-family: "relationtwo", cursive;
 }
