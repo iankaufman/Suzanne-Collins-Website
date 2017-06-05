@@ -11,7 +11,8 @@
 }
 
 .menu-hover-lines li a {
-  padding: 0.75rem 0;
+  padding: 0.5rem 0rem 0.45rem 0;
+  margin-top: 5px;
   color: rgba(44, 44, 44, 0.5);
   position: relative;
   margin-left: .5em;
@@ -57,13 +58,41 @@
 .menu-hover-lines .active a::after {
   width: 100%;
 }
+/* This is for small screens */
 @media only screen and (max-width: 40em){
     .menu-hover-lines {
         -ms-flex-pack: center;
       justify-content: center;
-    }}
+    }
+    /* removing underline effect for small screens */
+    .menu-hover-lines a:before,
+.menu-hover-lines a::after {
+  height: 0px;
+  position: absolute;
+  content: '';
+  transition: all 0.35s ease;
+  background-color: #9f1938;
+  width: 0;
+}
+.menu-hover-lines a:hover,
+}
+/* This is for medium screens */
 @media only screen and (min-width: 40.063em) {.linkleft {
          -ms-flex-pack: end;
       justify-content: flex-end; 
-    } } /* min-width 641px, medium screens */{
+    } } /* min-width 641px, medium screens */
+
+.welcome{
+    padding: 1em 8em 0em 8em;
+    background-image: #67787F url("../images/index/welcomebgg.jpg");
+    color: white;
+    height: 100rem;
+    background-repeat: no-repeat;
+    background-position: 
     
+}
+
+.welcome p{
+    font-size: 1.2em;
+    line-height: 1.2;
+}
