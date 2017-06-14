@@ -1,107 +1,165 @@
 /* CSS Menu From Foundation */
 
 .menu-hover-lines {
-  text-align: center;
-  text-transform: uppercase;
-  font-weight: 600;
-  transition: all 0.35s ease;
-  font-family: "sommet",sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: all 0.35s ease;
+    font-family: "sommet", sans-serif;
     font-size: 1.5em;
-    
 }
 
 .menu-hover-lines li a {
-  padding: 0.5rem 0rem 0.45rem 0;
-  margin-top: 5px;
-  color: rgba(44, 44, 44, 0.5);
-  position: relative;
-  margin-left: .5em;
+    padding: 0.5rem 0rem 0.45rem 0;
+    margin-top: 5px;
+    color: rgba(44, 44, 44, 0.5);
+    position: relative;
+    margin-left: .5em;
 }
 
 .menu-hover-lines li:first-child a {
-  margin-left: 0;
+    margin-left: 0;
 }
 
-.menu-hover-lines li.active > a {
-  background-color: transparent;
+.menu-hover-lines li.active>a {
+    background-color: transparent;
 }
 
 .menu-hover-lines a:before,
 .menu-hover-lines a::after {
-  height: 3px;
-  position: absolute;
-  content: '';
-  transition: all 0.35s ease;
-  background-color: #9f1938;
-  width: 0;
+    height: 3px;
+    position: absolute;
+    content: '';
+    transition: all 0.35s ease;
+    background-color: #9f1938;
+    width: 0;
 }
 
 .menu-hover-lines a::before {
-  top: 0;
-  left: 0;
+    top: 0;
+    left: 0;
 }
 
 .menu-hover-lines a::after {
-  bottom: 0;
-  right: 0;
+    bottom: 0;
+    right: 0;
 }
 
 .menu-hover-lines a:hover,
-.menu-hover-lines li.active > a {
-  color: #403e3e;
-  transition: all 0.35s ease;
+.menu-hover-lines li.active>a {
+    color:black;
+    transition: all 0.35s ease;
 }
 
 .menu-hover-lines a:hover::before,
 .menu-hover-lines .active a::before,
 .menu-hover-lines a:hover::after,
 .menu-hover-lines .active a::after {
-  width: 100%;
+    width: 100%;
 }
-/* This is for small screens */
-@media only screen and (max-width: 40em){
-    .menu-hover-lines {
-        -ms-flex-pack: center;
-      justify-content: center;
-    }
-    /* removing underline effect for small screens */
-    .menu-hover-lines a:before,
-.menu-hover-lines a::after {
-  height: 0px;
-  position: absolute;
-  content: '';
-  transition: all 0.35s ease;
-  background-color: #9f1938;
-  width: 0;
-}
-.menu-hover-lines a:hover,
-}
-/* This is for medium screens */
-@media only screen and (min-width: 40.063em) {.linkleft {
-         -ms-flex-pack: end;
-      justify-content: flex-end; 
-    } } /* min-width 641px, medium screens */
 
-.welcome{
+.welcome {
     padding: 1em 8em 0em 8em;
     background: black url("../images/index/welcomebgg.jpg");
     color: white;
-    height:  31em;
+    height: 31em;
     background-repeat: no-repeat;
     background-size: contain;
-    
     background-position: right;
-   
-    
+    text-align: right;
 }
 
-.welcome p{
+.welcome p {
     font-size: 1.2em;
     line-height: 1.2;
-    font-family: "mr-eaves-sans", sans-serif;
+    font-family: "mr-eaves-sans", sans-serif; 
+    text-align: left;
+    
+   
 }
-.welcome h1{
+
+.welcome h1 {
     font-size: 5em;
     line-height: 1.2;
     font-family: "relationtwo", cursive;
+    text-align: center; 
+    
 }
+
+
+/* This is for super small screens */
+    
+@media only screen and (max-width: 639px) {
+    .menu-hover-lines {
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+    /* removing underline effect for small screens */
+    .menu-hover-lines a:before,
+    .menu-hover-lines a::after {
+        height: 0px;
+        position: absolute;
+        content: '';
+        transition: all 0.35s ease;
+        background-color: #9f1938;
+        width: 0;
+    }
+    .menu-hover-lines {
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+    /* removing underline effect for small screens */
+    .menu-hover-lines a:before,
+    .menu-hover-lines a::after {
+        height: 0px;
+        position: absolute;
+        content: '';
+        transition: all 0.35s ease;
+        background-color: #9f1938;
+        width: 0;
+    }
+    .welcome {
+        margin: 2em 0em 0em 0em;
+        padding: 1em 1em 0em 1em;
+        background: black;
+        color: white;
+        height: 24em;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: right;
+    }
+    .menu-hover-lines {
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 600;
+        transition: all 0.35s ease;
+        font-family: "sommet", sans-serif;
+        font-size: 2em;
+    }
+    .menu-hover-lines a:hover,
+    .menu-hover-lines li.active>a {
+        color: #9f1938;
+    }
+    .brand {
+     margin-top: 1em;
+    }
+    
+}
+
+
+/* This is for small screens */
+
+
+
+
+/* This is for medium screens */
+
+@media only screen and (min-width: 640px) {
+    .linkleft {
+        -ms-flex-pack: end;
+        justify-content: flex-end;
+    }
+}
+
+
+/* min-width 641px, medium screens */
