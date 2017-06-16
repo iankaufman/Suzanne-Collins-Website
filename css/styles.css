@@ -1,17 +1,21 @@
 /*font import from google */
+
 @import url('https://fonts.googleapis.com/css?family=Nothing+You+Could+Do');
+
 /* CSS Menu From Foundation */
+
+
 /* CSS is written top down from the page to bottom. Responsive code is after the main css */
-p{
-    font-family: "mr-eaves-sans", sans-serif; 
+
+p {
+    font-family: "mr-eaves-sans", sans-serif;
 }
-.nav{
+
+.nav {
     background-color: rgba(0, 0, 0, 0.8);
     position: fixed;
-   
     width: 100%;
     z-index: 5;
-   
 }
 
 .menu-hover-lines {
@@ -22,14 +26,16 @@ p{
     font-family: "sommet", sans-serif;
     font-size: 1.5em;
 }
-.hidden{
-   visibility: hidden; 
+
+.hidden {
+    visibility: hidden;
 }
+
 .menu-hover-lines li a {
     padding: 0.5rem 0rem 0.5rem 0;
     margin: .15em 0em 0.2em 0.5em;
     color: white;
-    position: relative; 
+    position: relative;
 }
 
 .menu-hover-lines li:first-child a {
@@ -72,26 +78,30 @@ p{
 .menu-hover-lines .active a::after {
     width: 100%;
 }
-.namebanner{
-    margin-top: 2.5em;
+
+.namebanner {
+    margin-top: 4.8em;
+    margin-bottom: 1em;
 }
-.namebanner h1{
+
+.namebanner h1 {
     font-family: "sommet", sans-serif;
     line-height: .5em;
     text-align: center;
     text-transform: uppercase;
-    font-size: 2.5em;
+    font-size: 3.2em;
     padding-top: .8em;
-    
 }
-.namebanner h2{
+
+.namebanner h2 {
     font-family: "sommet", sans-serif;
     line-height: 1em;
     text-align: center;
-     color: #9f1938;
-    font-size: 2em;
+    color: #9f1938;
+    font-size: 2.5em;
     padding-bottom: .5em;
 }
+
 .welcome {
     padding: 1em 2em 0em 5em;
     background: black url("../images/index/welcomebgg.jpg");
@@ -107,8 +117,6 @@ p{
     font-size: 1.2em;
     line-height: 1.2;
     text-align: left;
-    
-   
 }
 
 .welcome h1 {
@@ -116,58 +124,154 @@ p{
     font-size: 3.5em;
     line-height: .5em;
     font-family: 'Nothing You Could Do', cursive;
-    text-align: left; 
-    
+    text-align: left;
 }
 
 iframe {
-    padding-top: 2em;
+    padding: 2em 0em 2em 0em;
     display: block;
     margin: 0 auto;
-    width: 75%; 
-    height: 25em;
-    
+    width: 75%;
+    height: 31em;
 }
 
-.bookrow{
-    padding: 2em .5em 2em .5em;  
+.spotlight {
+    background-color: black;
 }
+.spotlight h4{
+        color: white;
+    text-align: center;
+    font-family: "mr-eaves-sans", sans-serif;
+      }
+.spotlight img {
+    margin: 1em 1em 1em 2em;
+    max-height: 35em;
+    display: block;
+    margin: 0 auto;
+}
+
+.spotlight h3 {
+    font-weight: 600;
+    text-align: center;
+    font-size: 1.7em;
+    font-family: "sommet", sans-serif;
+    color: white;
+    padding: .7em 0em 0em .51em;
+    line-height: .7em;
+}
+
+.spotlight p {
+    color: white;
+    font-size: 1.2em;
+    padding: 0em 0em .6em .51em;
+    line-height: 1em;
+    width: 21em;
+    margin: 0 auto;
+}
+
+.bookrow {
+    padding: 2em .5em 2em .5em;
+    clear: both;
+}
+
+
+/* this is to make each block a link*/
+
+.bookrow .columns:nth-of-type(1) {
+    position: relative;
+    transition: all 0.35s ease;
+}
+
+.bookrow .columns:nth-of-type(2) {
+    position: relative;
+    transition: all 0.35s ease;
+}
+
+.bookrow .columns:nth-of-type(3) {
+    position: relative;
+    transition: all 0.35s ease;
+}
+.bookrow .columns:nth-of-type(4) {
+    position: relative;
+    transition: all 0.35s ease;
+}
+
+.bookrow .columns:nth-of-type(1):hover {
+    background-color: #efefef;
+    transition: all 0.35s ease;
+}
+
+.bookrow .columns:nth-of-type(2):hover {
+    background-color: #efefef;
+    transition: all 0.35s ease;
+}
+
+.bookrow .columns:nth-of-type(3):hover {
+    background-color: #efefef;
+    transition: all 0.35s ease;
+}
+.bookrow .columns:nth-of-type(4):hover {
+    background-color: #efefef;
+    transition: all 0.35s ease;
+}
+.bookrow .columns:nth-of-type(4):hover:after {
+    content: "Not Yet Available";
+    text-align: center;
+}
+
+
+
 .bookrow img {
     padding: .5em 0em .7em 0em;
-
 }
-.bookrow h3{
+
+.bookrow h3 {
     font-weight: 600;
     font-size: 1.7em;
     font-family: "sommet", sans-serif;
     color: #9f1938;
     text-align: center;
 }
-.bookrow p{
 
-}
-.footer{
+.bookrow p {}
+
+.footer {
     text-align: center;
     padding: 1em;
     background-color: black;
     color: white;
-    
 }
-.footer h3{
-    font-family: "mr-eaves-sans", sans-serif; 
+
+.footer h3 {
+    font-family: "mr-eaves-sans", sans-serif;
     font-size: 1.2em;
-    
 }
+
+
+/* This is CSS for the individual book pages */
+
+a.button {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    text-decoration: none;
+    color: black;
+}
+
+a.button:hover {
+    color: grey;
+}
+
+
 /* This is for super small screens */
-    
+
 @media only screen and (max-width: 639px) {
-    .nav{
-    background-color: white;
+    .nav {
+        background-color: white;
         position: inherit;
-       
     }
-    .nav .columns:nth-of-type(2){
-    font-size: .6em;
+    .nav .columns:nth-of-type(2) {
+        font-size: .6em;
     }
     .menu-hover-lines {
         -ms-flex-pack: center;
@@ -195,9 +299,9 @@ iframe {
         width: 0;
     }
     .menu-hover-lines li a {
-    color: black;
-    position: relative; 
-}
+        color: black;
+        position: relative;
+    }
     .welcome {
         margin: 2em 0em 0em 0em;
         padding: 1em 1em 0em 1em;
@@ -218,37 +322,34 @@ iframe {
         -ms-flex-pack: center;
         justify-content: center;
     }
-    
     .menu-hover-lines a:hover,
     .menu-hover-lines li.active>a {
         color: #9f1938;
     }
     .brand {
-     margin-top: 1em;
+        margin-top: 1em;
     }
-    .namebanner{
-    display: none;
-}
+    .namebanner {
+        display: none;
+    }
     iframe {
+        width: 100%;
+        height: 25em;
+    }
     
-    width: 100%; 
-    height: 25em;   
-}
-    .bookrow{
-        
-    } 
-    .bookrow img{
+    .spotlight p {
+        width: 15em;
+    }
+    .bookrow {}
+    .bookrow img {
         display: block;
         height: 400px;
         margin: 0 auto;
     }
-    
 }
 
 
-
-
-/* This is for medium screens */
+/* This is for medium and large screens to move the left links in the nav bar too the end */
 
 @media only screen and (min-width: 640px) {
     .linkleft {
@@ -258,4 +359,19 @@ iframe {
 }
 
 
-/* min-width 641px, medium screens */
+/* the code below is used to make an entire div linkable. source is https://stackoverflow.com/questions/796087/make-a-div-into-a-link */
+
+
+/*Important:*/
+
+.link-spanner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    /* edit: fixes overlap error in IE7/8, 
+     make sure you have an empty gif 
+  background-image: url('empty.gif');*/
+}
