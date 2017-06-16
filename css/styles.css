@@ -126,7 +126,7 @@ p {
     font-family: 'Nothing You Could Do', cursive;
     text-align: left;
 }
-
+ 
 iframe {
     padding: 2em 0em 2em 0em;
     display: block;
@@ -374,4 +374,16 @@ a.button:hover {
     /* edit: fixes overlap error in IE7/8, 
      make sure you have an empty gif 
   background-image: url('empty.gif');*/
+}
+
+/* CSS for Biography page */
+.bio h1{
+    font-size: 2.5em;
+    line-height: .5em;
+    font-family: 'Nothing You Could Do', cursive;
+   text-align: center;
+    margin: 1em 1em 1em 1em;
+}
+.bio p{
+    padding: 0em 5em 0em 5em;
 }
