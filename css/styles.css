@@ -1,8 +1,19 @@
+/*font import from google */
+@import url('https://fonts.googleapis.com/css?family=Nothing+You+Could+Do');
 /* CSS Menu From Foundation */
 
 p{
     font-family: "mr-eaves-sans", sans-serif; 
 }
+.nav{
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+   
+    width: 100%;
+    z-index: 5;
+   
+}
+
 .menu-hover-lines {
     text-align: center;
     text-transform: uppercase;
@@ -11,11 +22,13 @@ p{
     font-family: "sommet", sans-serif;
     font-size: 1.5em;
 }
-
+.hidden{
+   visibility: hidden; 
+}
 .menu-hover-lines li a {
     padding: 0.5rem 0rem 0.5rem 0;
     margin: .15em 0em 0.2em 0.5em;
-    color: rgba(44, 44, 44, 0.5);
+    color: white;
     position: relative; 
 }
 
@@ -49,7 +62,7 @@ p{
 
 .menu-hover-lines a:hover,
 .menu-hover-lines li.active>a {
-    color:black;
+    color: #c1c1c1;
     transition: all 0.35s ease;
 }
 
@@ -59,7 +72,26 @@ p{
 .menu-hover-lines .active a::after {
     width: 100%;
 }
-
+.namebanner{
+    margin-top: 2.5em;
+}
+.namebanner h1{
+    font-family: "sommet", sans-serif;
+    line-height: .5em;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2.5em;
+    padding-top: .8em;
+    
+}
+.namebanner h2{
+    font-family: "sommet", sans-serif;
+    line-height: 1em;
+    text-align: center;
+     color: #9f1938;
+    font-size: 2em;
+    padding-bottom: .5em;
+}
 .welcome {
     padding: 1em 2em 0em 5em;
     background: black url("../images/index/welcomebgg.jpg");
@@ -80,10 +112,11 @@ p{
 }
 
 .welcome h1 {
-    font-size: 5em;
+    padding-top: .5em;
+    font-size: 3.5em;
     line-height: 1.2;
-    font-family: "relationtwo", cursive;
-    text-align: center; 
+    font-family: 'Nothing You Could Do', cursive;
+    text-align: left; 
     
 }
 
@@ -101,22 +134,33 @@ iframe {
 }
 .bookrow img {
     padding: .5em 0em .7em 0em;
+
 }
 .bookrow h3{
     font-weight: 600;
     font-size: 1.7em;
     font-family: "sommet", sans-serif;
     color: #9f1938;
+    text-align: center;
 }
 .bookrow p{
-    
+
 }
 /* This is for super small screens */
     
 @media only screen and (max-width: 639px) {
+    .nav{
+    background-color: white;
+        position: inherit;
+       
+    }
+    .nav .columns:nth-of-type(2){
+    font-size: .6em;
+    }
     .menu-hover-lines {
         -ms-flex-pack: center;
         justify-content: center;
+        visibility: visible;
     }
     /* removing underline effect for small screens */
     .menu-hover-lines a:before,
@@ -128,10 +172,6 @@ iframe {
         background-color: #9f1938;
         width: 0;
     }
-    .menu-hover-lines {
-        -ms-flex-pack: center;
-        justify-content: center;
-    }
     /* removing underline effect for small screens */
     .menu-hover-lines a:before,
     .menu-hover-lines a::after {
@@ -142,6 +182,10 @@ iframe {
         background-color: #9f1938;
         width: 0;
     }
+    .menu-hover-lines li a {
+    color: black;
+    position: relative; 
+}
     .welcome {
         margin: 2em 0em 0em 0em;
         padding: 1em 1em 0em 1em;
@@ -159,7 +203,10 @@ iframe {
         transition: all 0.35s ease;
         font-family: "sommet", sans-serif;
         font-size: 2em;
+        -ms-flex-pack: center;
+        justify-content: center;
     }
+    
     .menu-hover-lines a:hover,
     .menu-hover-lines li.active>a {
         color: #9f1938;
@@ -167,6 +214,9 @@ iframe {
     .brand {
      margin-top: 1em;
     }
+    .namebanner{
+    display: none;
+}
     iframe {
     
     width: 100%; 
@@ -180,9 +230,7 @@ iframe {
         height: 400px;
         margin: 0 auto;
     }
-    .bookrow h3{
-        text-align: center;
-    }
+    
 }
 
 
