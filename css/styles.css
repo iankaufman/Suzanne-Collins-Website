@@ -11,12 +11,14 @@ p {
     font-family: "mr-eaves-sans", sans-serif;
 }
 
-.nav {
+nav {
     background-color: rgba(0, 0, 0, 0.8);
     position: fixed;
     width: 100%;
     z-index: 5;
+    border-bottom: 3px solid #9f1938;
 }
+
 
 .menu-hover-lines {
     text-align: center;
@@ -137,6 +139,7 @@ iframe {
 
 .spotlight {
     background-color: black;
+    margin-bottom: 1em;
 }
 .spotlight h4{
         color: white;
@@ -170,7 +173,7 @@ iframe {
 }
 
 .bookrow {
-    padding: 2em .5em 2em .5em;
+    padding: 1em .5em 2em .5em;
     clear: both;
 }
 
@@ -215,7 +218,7 @@ iframe {
     transition: all 0.35s ease;
 }
 .bookrow .columns:nth-of-type(4):hover:after {
-    content: "Not Yet Available";
+    content: "Coming Soon";
     text-align: center;
 }
 
@@ -240,6 +243,7 @@ iframe {
     padding: 1em;
     background-color: black;
     color: white;
+    
 }
 
 .footer h3 {
@@ -263,14 +267,53 @@ a.button:hover {
 }
 
 
+/* the code below is used to make an entire div linkable. source is https://stackoverflow.com/questions/796087/make-a-div-into-a-link */
+
+
+/*Important:*/
+
+.link-spanner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    /* edit: fixes overlap error in IE7/8, 
+     make sure you have an empty gif 
+  background-image: url('empty.gif');*/
+}
+
+/* CSS for Biography page */
+.bio h1{
+    font-size: 2.5em;
+    line-height: .5em;
+    font-family: 'Nothing You Could Do', cursive;
+   text-align: center;
+    margin: 1em 1em 1em 1em;
+}
+.bio p{
+    padding: 0em 5em 0em 5em;
+}
+.bio p:nth-of-type(1){
+    text-align: right;
+    display: block;
+    float: right;
+    padding: 1em;
+}
+
+/* css for contact page */
+form{
+   padding: 1em 11em 1em 11em;
+}
 /* This is for super small screens */
 
 @media only screen and (max-width: 639px) {
-    .nav {
+    nav {
         background-color: white;
         position: inherit;
     }
-    .nav .columns:nth-of-type(2) {
+    nav .columns:nth-of-type(2) {
         font-size: .6em;
     }
     .menu-hover-lines {
@@ -346,6 +389,9 @@ a.button:hover {
         height: 400px;
         margin: 0 auto;
     }
+    form{
+   padding: 1em 0em 1em 0em;
+}
 }
 
 
@@ -358,32 +404,3 @@ a.button:hover {
     }
 }
 
-
-/* the code below is used to make an entire div linkable. source is https://stackoverflow.com/questions/796087/make-a-div-into-a-link */
-
-
-/*Important:*/
-
-.link-spanner {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    /* edit: fixes overlap error in IE7/8, 
-     make sure you have an empty gif 
-  background-image: url('empty.gif');*/
-}
-
-/* CSS for Biography page */
-.bio h1{
-    font-size: 2.5em;
-    line-height: .5em;
-    font-family: 'Nothing You Could Do', cursive;
-   text-align: center;
-    margin: 1em 1em 1em 1em;
-}
-.bio p{
-    padding: 0em 5em 0em 5em;
-}
