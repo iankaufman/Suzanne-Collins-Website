@@ -1,0 +1,494 @@
+Last login: Wed Jun 14 01:12:42 on ttys000
+pcp074720pcs:~ iankaufman$ cd documents
+pcp074720pcs:documents iankaufman$ cd su
+-bash: cd: su: No such file or directory
+pcp074720pcs:documents iankaufman$ cd suzanne-collins-website
+pcp074720pcs:suzanne-collins-website iankaufman$ git status
+On branch master
+Your branch and 'origin/master' have diverged,
+and have 2 and 2 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+All conflicts fixed but you are still merging.
+  (use "git commit" to conclude merge)
+
+pcp074720pcs:suzanne-collins-website iankaufman$ git commit "merge"
+fatal: cannot do a partial commit during a merge.
+pcp074720pcs:suzanne-collins-website iankaufman$ git commit -am "merge"
+[master 577a58e] merge
+pcp074720pcs:suzanne-collins-website iankaufman$ git push
+Counting objects: 13, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (13/13), done.
+Writing objects: 100% (13/13), 190.15 KiB | 0 bytes/s, done.
+Total 13 (delta 5), reused 0 (delta 0)
+remote: Resolving deltas: 100% (5/5), completed with 3 local objects.
+To https://github.com/iankaufman/Suzanne-Collins-Website.git
+   cc3943d..577a58e  master -> master
+pcp074720pcs:suzanne-collins-website iankaufman$ git checkout gh-pages
+Branch gh-pages set up to track remote branch gh-pages from origin.
+Switched to a new branch 'gh-pages'
+pcp074720pcs:suzanne-collins-website iankaufman$ git merge master
+
+[1]+  Stopped                 git merge master
+pcp074720pcs:suzanne-collins-website iankaufman$ git push
+Everything up-to-date
+pcp074720pcs:suzanne-collins-website iankaufman$ git checkout gh-pages
+M	css/styles.css
+A	images/works/catchingfire.jpg
+A	images/works/mockingjay.jpg
+A	images/works/thehungergames.jpg
+M	index.html
+Already on 'gh-pages'
+Your branch is up-to-date with 'origin/gh-pages'.
+pcp074720pcs:suzanne-collins-website iankaufman$ git merge master
+
+[2]+  Stopped                 git merge master
+pcp074720pcs:suzanne-collins-website iankaufman$ git checkout gh-pages
+M	css/styles.css
+A	images/works/catchingfire.jpg
+A	images/works/mockingjay.jpg
+A	images/works/thehungergames.jpg
+M	index.html
+Already on 'gh-pages'
+Your branch is up-to-date with 'origin/gh-pages'.
+pcp074720pcs:suzanne-collins-website iankaufman$ git merge master
+
+[3]+  Stopped                 git merge master
+pcp074720pcs:suzanne-collins-website iankaufman$ git merge master
+error: There was a problem with the editor 'vi'.
+Not committing merge; use 'git commit' to complete the merge.
+pcp074720pcs:suzanne-collins-website iankaufman$ git status
+On branch gh-pages
+Your branch is up-to-date with 'origin/gh-pages'.
+All conflicts fixed but you are still merging.
+  (use "git commit" to conclude merge)
+
+Changes to be committed:
+
+	modified:   css/styles.css
+	new file:   images/works/catchingfire.jpg
+	new file:   images/works/mockingjay.jpg
+	new file:   images/works/thehungergames.jpg
+	modified:   index.html
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   css/styles.css
+
+pcp074720pcs:suzanne-collins-website iankaufman$ git add -A
+pcp074720pcs:suzanne-collins-website iankaufman$ git commit -am "change of banner and change of nav bar logo style"
+[gh-pages 0b2ac0d] change of banner and change of nav bar logo style
+pcp074720pcs:suzanne-collins-website iankaufman$ git push
+To https://github.com/iankaufman/Suzanne-Collins-Website.git
+ ! [rejected]        gh-pages -> gh-pages (fetch first)
+error: failed to push some refs to 'https://github.com/iankaufman/Suzanne-Collins-Website.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+pcp074720pcs:suzanne-collins-website iankaufman$ git commit -am
+error: switch `m' requires a value
+usage: git commit [<options>] [--] <pathspec>...
+
+    -q, --quiet           suppress summary after successful commit
+    -v, --verbose         show diff in commit message template
+
+Commit message options
+    -F, --file <file>     read message from file
+    --author <author>     override author for commit
+    --date <date>         override date for commit
+    -m, --message <message>
+                          commit message
+    -c, --reedit-message <commit>
+                          reuse and edit message from specified commit
+    -C, --reuse-message <commit>
+                          reuse message from specified commit
+    --fixup <commit>      use autosquash formatted message to fixup specified commit
+    --squash <commit>     use autosquash formatted message to squash specified commit
+    --reset-author        the commit is authored by me now (used with -C/-c/--amend)
+    -s, --signoff         add Signed-off-by:
+    -t, --template <file>
+                          use specified template file
+    -e, --edit            force edit of commit
+    --cleanup <default>   how to strip spaces and #comments from message
+    --status              include status in commit message template
+    -S, --gpg-sign[=<key-id>]
+                          GPG sign commit
+
+Commit contents options
+    -a, --all             commit all changed files
+    -i, --include         add specified files to index for commit
+    --interactive         interactively add files
+    -p, --patch           interactively add changes
+    -o, --only            commit only specified files
+    -n, --no-verify       bypass pre-commit and commit-msg hooks
+    --dry-run             show what would be committed
+    --short               show status concisely
+    --branch              show branch information
+    --porcelain           machine-readable output
+    --long                show status in long format (default)
+    -z, --null            terminate entries with NUL
+    --amend               amend previous commit
+    --no-post-rewrite     bypass post-rewrite hook
+    -u, --untracked-files[=<mode>]
+                          show untracked files, optional modes: all, normal, no. (Default: all)
+
+pcp074720pcs:suzanne-collins-website iankaufman$ git status
+On branch gh-pages
+Your branch is ahead of 'origin/gh-pages' by 4 commits.
+  (use "git push" to publish your local commits)
+nothing to commit, working tree clean
+pcp074720pcs:suzanne-collins-website iankaufman$ git status
+On branch gh-pages
+Your branch is ahead of 'origin/gh-pages' by 4 commits.
+  (use "git push" to publish your local commits)
+nothing to commit, working tree clean
+pcp074720pcs:suzanne-collins-website iankaufman$ git push
+To https://github.com/iankaufman/Suzanne-Collins-Website.git
+ ! [rejected]        gh-pages -> gh-pages (fetch first)
+error: failed to push some refs to 'https://github.com/iankaufman/Suzanne-Collins-Website.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+pcp074720pcs:suzanne-collins-website iankaufman$ git checkout master
+Switched to branch 'master'
+Your branch is up-to-date with 'origin/master'.
+pcp074720pcs:suzanne-collins-website iankaufman$ git push
+Everything up-to-date
+pcp074720pcs:suzanne-collins-website iankaufman$ git log
+commit 577a58e124c9a8d59506075b314dad0b6f02d1a7
+Merge: 4b7a2f6 cc3943d
+Author: iankaufman <iankaufman80@gmail.com>
+Date:   Wed Jun 14 05:14:48 2017 -0700
+
+    merge
+
+commit 4b7a2f69412bafbc287585c304a9eea22ef82c17
+Author: iankaufman <iankaufman80@gmail.com>
+Date:   Wed Jun 14 05:11:17 2017 -0700
+
+    added images
+
+commit 08459c7bbf1c90336fd5242b9e8ac2678ba14df2
+Author: iankaufman <iankaufman80@gmail.com>
+Date:   Wed Jun 14 05:10:29 2017 -0700
+
+    added book row to index
+
+commit cc3943d309b3a259ae56a26cb2cdbdb18218fb55
+Merge: 92ebe9a ab96d58
+Author: Ian Kaufman <iankaufman80@gmail.com>
+Date:   Wed Jun 14 01:20:52 2017 -0700
+
+[4]+  Stopped                 git log
+pcp074720pcs:suzanne-collins-website iankaufman$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   css/foundation.css
+	modified:   css/styles.css
+	modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+pcp074720pcs:suzanne-collins-website iankaufman$ git add -A
+pcp074720pcs:suzanne-collins-website iankaufman$ git commit -am "completed index page"
+[master 18cec0b] completed index page
+ 3 files changed, 75 insertions(+), 18 deletions(-)
+pcp074720pcs:suzanne-collins-website iankaufman$ git push
+Counting objects: 6, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 1.20 KiB | 0 bytes/s, done.
+Total 6 (delta 5), reused 0 (delta 0)
+remote: Resolving deltas: 100% (5/5), completed with 5 local objects.
+To https://github.com/iankaufman/Suzanne-Collins-Website.git
+   577a58e..18cec0b  master -> master
+pcp074720pcs:suzanne-collins-website iankaufman$ git push git@github.com:iankaufman/Suzanne-Collins-Website.git
+The authenticity of host 'github.com (192.30.255.113)' can't be established.
+RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.
+Are you sure you want to continue connecting (yes/no)? no
+Host key verification failed.
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+pcp074720pcs:suzanne-collins-website iankaufman$ push gh-pages
+-bash: push: command not found
+pcp074720pcs:suzanne-collins-website iankaufman$ git push gh-pages
+fatal: 'gh-pages' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+pcp074720pcs:suzanne-collins-website iankaufman$ git branch
+  gh-pages
+* master
+pcp074720pcs:suzanne-collins-website iankaufman$ git checkout gh-pages
+Switched to branch 'gh-pages'
+Your branch is ahead of 'origin/gh-pages' by 4 commits.
+  (use "git push" to publish your local commits)
+pcp074720pcs:suzanne-collins-website iankaufman$ git push
+Counting objects: 6, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 1.10 KiB | 0 bytes/s, done.
+Total 6 (delta 4), reused 0 (delta 0)
+remote: Resolving deltas: 100% (4/4), completed with 4 local objects.
+To https://github.com/iankaufman/Suzanne-Collins-Website.git
+   577a58e..0b2ac0d  gh-pages -> gh-pages
+pcp074720pcs:suzanne-collins-website iankaufman$ git checkout master
+Switched to branch 'master'
+Your branch is up-to-date with 'origin/master'.
+pcp074720pcs:suzanne-collins-website iankaufman$ git checkout gh-pages
+Switched to branch 'gh-pages'
+Your branch is up-to-date with 'origin/gh-pages'.
+pcp074720pcs:suzanne-collins-website iankaufman$ git checkout master
+Switched to branch 'master'
+Your branch is up-to-date with 'origin/master'.
+pcp074720pcs:suzanne-collins-website iankaufman$ git push
+Everything up-to-date
+pcp074720pcs:suzanne-collins-website iankaufman$ git commit -am "added footer"
+[master 111a88c] added footer
+ 2 files changed, 20 insertions(+), 3 deletions(-)
+pcp074720pcs:suzanne-collins-website iankaufman$ git push
+Counting objects: 5, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 708 bytes | 0 bytes/s, done.
+Total 5 (delta 4), reused 0 (delta 0)
+remote: Resolving deltas: 100% (4/4), completed with 4 local objects.
+To https://github.com/iankaufman/Suzanne-Collins-Website.git
+   18cec0b..111a88c  master -> master
+pcp074720pcs:suzanne-collins-website iankaufman$ git add -A
+gtpcp074720pcs:suzanne-collins-website iankaufman$ git commit -am "added individl book pages"
+[master dc2938b] added individual book pages
+ 8 files changed, 495 insertions(+), 68 deletions(-)
+ create mode 100644 images/works/thedarkdays.jpg
+ create mode 100644 works.html
+ create mode 100644 works/catchingfire.html
+ create mode 100644 works/mockingjay.html
+ create mode 100644 works/thehungergames.html
+pcp074720pcs:suzanne-collins-website iankaufman$ git push
+Counting objects: 14, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (14/14), done.
+Writing objects: 100% (14/14), 80.27 KiB | 0 bytes/s, done.
+Total 14 (delta 9), reused 0 (delta 0)
+remote: Resolving deltas: 100% (9/9), completed with 6 local objects.
+To https://github.com/iankaufman/Suzanne-Collins-Website.git
+   111a88c..dc2938b  master -> master
+pcp074720pcs:suzanne-collins-website iankaufman$ git log
+commit dc2938bd83e22d121bc0adec253ed3560436fa68
+Author: iankaufman <iankaufman80@gmail.com>
+Date:   Fri Jun 16 05:47:26 2017 -0700
+
+    added individual book pages
+
+commit 111a88cf0353c973f6d39b87fc1050ae3a79b525
+Author: iankaufman <iankaufman80@gmail.com>
+Date:   Fri Jun 16 03:40:42 2017 -0700
+
+    added footer
+
+commit 18cec0b7103c5f2a15c8553e223f7c995e74674e
+Author: iankaufman <iankaufman80@gmail.com>
+Date:   Fri Jun 16 03:28:03 2017 -0700
+
+    completed index page
+
+commit 577a58e124c9a8d59506075b314dad0b6f02d1a7
+Merge: 4b7a2f6 cc3943d
+Author: iankaufman <iankaufman80@gmail.com>
+Date:   Wed Jun 14 05:14:48 2017 -0700
+
+    merge
+
+commit 4b7a2f69412bafbc287585c304a9eea22ef82c17
+Author: iankaufman <iankaufman80@gmail.com>
+Date:   Wed Jun 14 05:11:17 2017 -0700
+
+    added images
+
+commit 08459c7bbf1c90336fd5242b9e8ac2678ba14df2
+Author: iankaufman <iankaufman80@gmail.com>
+Date:   Wed Jun 14 05:10:29 2017 -0700
+
+    added book row to index
+
+commit cc3943d309b3a259ae56a26cb2cdbdb18218fb55
+Merge: 92ebe9a ab96d58
+Author: Ian Kaufman <iankaufman80@gmail.com>
+Date:   Wed Jun 14 01:20:52 2017 -0700
+
+    Merge pull request #2 from iankaufman/gh-pages
+    
+    Merge pull request #1 from iankaufman/master
+
+commit 92ebe9a2a5e42e816293f8673e105794ab59fe8a
+Author: iankaufman <iankaufman80@gmail.com>
+Date:   Wed Jun 14 01:20:04 2017 -0700
+
+    type
+
+commit ab96d58ee05dcb3685cac5b35d081c0fa97da0b0
+Merge: c4f3cd9 6540c24
+Author: Ian Kaufman <iankaufman80@gmail.com>
+Date:   Wed Jun 14 01:17:29 2017 -0700
+
+    Merge pull request #1 from iankaufman/master
+    
+    add signature
+
+commit 6540c241bc94ec91079e7e0919b73fc439cf3056
+Author: iankaufman80 <iankaufman80@gmail.com>
+Date:   Mon Jun 5 11:58:01 2017 -0700
+
+    add signature
+
+commit c4f3cd9013260a30f53f5f3a3c750e79a5924f5f
+Author: iankaufman80 <iankaufman80@gmail.com>
+Date:   Mon Jun 5 11:47:19 2017 -0700
+
+    added black bgg infinity and fonts
+
+commit e259757ee7ac6872b6daa91d2812e8f173d0c7c4
+Author: iankaufman80 <iankaufman80@gmail.com>
+Date:   Mon Jun 5 11:17:47 2017 -0700
+
+    added more image files
+
+commit c4465c0520e6caf25af4f1af5e5d381b3f664287
+Author: iankaufman80 <iankaufman80@gmail.com>
+Date:   Mon Jun 5 11:17:32 2017 -0700
+
+    added background image to weclome page
+
+commit 6b6e1f99416b8d5e46be6fcd8f7347055943e8d9
+Author: iankaufman <iankaufman80@gmail.com>
+Date:   Tue May 23 14:59:32 2017 -0700
+
+    begin adding slider
+
+commit d709b3f952a837ba471bb0afa4070c54b1e5bdcf
+Author: iankaufman <iankaufman80@gmail.com>
+Date:   Tue May 23 14:19:21 2017 -0700
+
+    made nav bar responsive
+
+commit e43a25d2af32835ea9abb04570837e095fd989bd
+Author: iankaufman <iankaufman80@gmail.com>
+Date:   Tue May 23 13:53:32 2017 -0700
+
+    added nav bar completed styling it
+
+commit 38dee2ab026d1ce14fc1c029a6eea015163f0580
+Author: iankaufman <iankaufman80@gmail.com>
+Date:   Tue May 23 13:12:21 2017 -0700
+
+    added new nav bar
+
+commit 47e66c3ac8640e25e26b8c8622cbf7ab0f52d04c
+Author: iankaufman <iankaufman80@gmail.com>
+Date:   Tue May 23 12:51:17 2017 -0700
+
+    using foundation instead of pure.css
+
+commit 5c2ede5c20d9c3e83b516fd55a019fd80fba83fc
+Author: iankaufman80 <iankaufman80@gmail.com>
+Date:   Mon May 15 12:02:05 2017 -0700
+
+    added image to git
+
+commit dc2938bd83e22d121bc0adec253ed3560436fa68
+commit dc2938bd83e22d121bc0adec253ed3560436fa68
+Author: iankaufman <iankaufman80@gmail.com>
+Date:   Fri Jun 16 05:47:26 2017 -0700
+
+    added individual book pages
+
+commit 111a88cf0353c973f6d39b87fc1050ae3a79b525
+Author: iankaufman <iankaufman80@gmail.com>
+Date:   Fri Jun 16 03:40:42 2017 -0700
+
+    added footer
+
+commit 18cec0b7103c5f2a15c8553e223f7c995e74674e
+Author: iankaufman <iankaufman80@gmail.com>
+Date:   Fri Jun 16 03:28:03 2017 -0700
+
+    completed index page
+
+commit 577a58e124c9a8d59506075b314dad0b6f02d1a7
+Merge: 4b7a2f6 cc3943d
+Author: iankaufman <iankaufman80@gmail.com>
+Date:   Wed Jun 14 05:14:48 2017 -0700
+
+
+[5]+  Stopped                 git log
+pcp074720pcs:suzanne-collins-website iankaufman$ git add -A
+pcp074720pcs:suzanne-collins-website iankaufman$ git commit -am "Completed bio page"
+[master 3fd1dc1] Completed bio page
+ 2 files changed, 98 insertions(+), 1 deletion(-)
+ create mode 100644 bio.html
+pcp074720pcs:suzanne-collins-website iankaufman$ git push
+Counting objects: 5, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 2.88 KiB | 0 bytes/s, done.
+Total 5 (delta 3), reused 0 (delta 0)
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To https://github.com/iankaufman/Suzanne-Collins-Website.git
+   dc2938b..3fd1dc1  master -> master
+pcp074720pcs:suzanne-collins-website iankaufman$ git add -A
+pcp074720pcs:suzanne-collins-website iankaufman$ git commit -am "Completed all pages including contact page"
+[master c72bc0e] Completed all pages including contact page
+ 16 files changed, 381 insertions(+), 204 deletions(-)
+ create mode 100644 960_sketch_12_col.pdf
+ create mode 100644 contact.html
+ create mode 100644 favicon.ico
+ create mode 100644 images/bio/profile1.jpg
+ create mode 100644 images/works/.DS_Store
+ create mode 100644 js/.DS_Store
+ rewrite works.html (64%)
+pcp074720pcs:suzanne-collins-website iankaufman$ git push
+Counting objects: 25, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (24/24), done.
+Writing objects: 100% (25/25), 105.82 KiB | 0 bytes/s, done.
+Total 25 (delta 14), reused 0 (delta 0)
+remote: Resolving deltas: 100% (14/14), completed with 13 local objects.
+To https://github.com/iankaufman/Suzanne-Collins-Website.git
+   3fd1dc1..c72bc0e  master -> master
+pcp074720pcs:suzanne-collins-website iankaufman$ git log
+commit c72bc0eb0b3990f9bbc59d6702f7e01948f26137
+Author: iankaufman <iankaufman80@gmail.com>
+Date:   Fri Jun 16 23:29:57 2017 -0700
+
+    Completed all pages including contact page
+
+commit 3fd1dc12c33b851088c9312008a8ed525d53c78f
+Author: iankaufman <iankaufman80@gmail.com>
+Date:   Fri Jun 16 12:20:05 2017 -0700
+
+    Completed bio page
+
+commit dc2938bd83e22d121bc0adec253ed3560436fa68
+Author: iankaufman <iankaufman80@gmail.com>
+Date:   Fri Jun 16 05:47:26 2017 -0700
+
+    added individual book pages
+
+commit 111a88cf0353c973f6d39b87fc1050ae3a79b525
+Author: iankaufman <iankaufman80@gmail.com>
+Date:   Fri Jun 16 03:40:42 2017 -0700
+
+    added footer
+:
